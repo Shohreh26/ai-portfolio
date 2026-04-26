@@ -1,212 +1,141 @@
-<!-- ===================== index.html (Projects Page) ===================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | AI Construction Portfolio</title>
-
-  <style>
-    :root {
-      --icy-blue: #add7f6;
-      --baby-blue-ice: #87bfff;
-      --blue-energy: #3f8efc;
-      --electric-sapphire: #2667ff;
-      --ultrasonic-blue: #3b28cc;
-    }
-
-    * { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
-    body { background:#f5f7fb; }
-
-    header { background:linear-gradient(135deg, var(--blue-energy), var(--ultrasonic-blue)); padding:20px; color:white; }
-    nav { display:flex; justify-content:space-between; align-items:center; }
-    nav a { color:white; margin-left:20px; text-decoration:none; }
-
-    .section { padding:60px 40px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
-
-    .card {
-      background:white; padding:20px; border-radius:12px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    footer { text-align:center; padding:20px; background:#111; color:white; }
-  </style>
+  <title>University Portfolio | Shohreh Zangeneh-Hershey · KU</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="page-home">
 
 <header>
-  <nav>
-    <h2>AI Portfolio</h2>
-    <div>
-      <a href="about.html">About</a>
-      <a href="index.html">Projects</a>
-      <a href="articles.html">Weekly Articles</a>
-    </div>
-  </nav>
+  <div class="header-inner">
+    <p class="site-title"><a href="index.html">University Portfolio</a></p>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="assignments.html">Assignments</a></li>
+        <li><a href="articles.html">Weekly AI News</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<section class="section">
-  <h2>Projects</h2>
-  <div class="grid">
-
-    <div class="card">
-      <h3>AI Scheduling Optimization</h3>
-      <p>Improving planning and scheduling using AI tools.</p>
+<main>
+  <!-- Full-width hero: modern architect landing -->
+  <section class="home-hero" aria-label="Introduction">
+    <img
+      class="home-hero__photo"
+      src="images/blueprint-workspace.png"
+      alt="Architectural floor plan with tablet showing building visualization and drafting tools on a desk"
+      width="1600"
+      height="900"
+    >
+    <div class="home-hero__overlay" aria-hidden="true"></div>
+    <div class="home-hero__content">
+      <p class="home-hero__eyebrow">University of Kansas · University of Kansas portfolio</p>
+      <h1 class="home-hero__title">Shohreh Zangeneh-Hershey</h1>
+      <p class="home-hero__lead">Architecture degree, School of Architecture at the University of Kansas · Construction Management (School of Engineering) · Project Manager</p>
+      <div class="home-hero__actions">
+        <a class="home-btn home-btn--ghost" href="index.html">Home</a>
+        <a class="home-btn home-btn--ghost" href="about.html">About</a>
+        <a class="home-btn home-btn--solid" href="assignments.html">Assignments</a>
+        <a class="home-btn home-btn--ghost" href="articles.html">Weekly AI News</a>
+        <a class="home-btn home-btn--ghost" href="https://www.linkedin.com/in/shohreh-zangeneh-hershey-012a9b48/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Facility Management AI</h3>
-      <p>Predictive maintenance and smart building operations.</p>
+  <!-- Split intro + image -->
+  <section class="home-split wrap">
+    <div class="home-split__text">
+      <h2 class="home-heading">University of Kansas portfolio</h2>
+      <p>
+        This site is my <strong>university portfolio</strong> for the <strong>University of Kansas</strong>. I hold an
+        <strong>architecture degree from the School of Architecture at the University of Kansas</strong> and a degree in
+        <strong>Construction Management</strong> from the <strong>School of Engineering</strong>, linking design thinking with delivery, estimating, and field practice.
+        School projects, studios, and CM work live in <a class="home-link" href="articles.html">Weekly AI News</a>.
+      </p>
+      <p>
+        Professionally, I lead project delivery for architecture and planning teams. My path includes work as a Project Architect at
+        GLMV Architecture, Project Management at Archimages, Inc., and current leadership at TESSERE.
+      </p>
     </div>
-
-    <div class="card">
-      <h3>Construction Data Analysis</h3>
-      <p>Using AI to analyze project data and improve decisions.</p>
+    <div class="home-split__visual">
+      <img
+        src="images/cm-workstation.png"
+        alt="Dual monitors with project schedules, charts, and construction management data"
+        width="900"
+        height="600"
+      >
     </div>
+  </section>
 
-  </div>
-</section>
-
-<footer>© 2026 AI Portfolio</footer>
-</body>
-</html>
-
-
-<!-- ===================== about.html ===================== -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me | AI Portfolio</title>
-
-  <style>
-    :root {
-      --blue-energy: #3f8efc;
-      --ultrasonic-blue: #3b28cc;
-    }
-
-    body { font-family:Arial; margin:0; background:#f5f7fb; }
-    header { background:linear-gradient(135deg, var(--blue-energy), var(--ultrasonic-blue)); padding:20px; color:white; }
-    nav { display:flex; justify-content:space-between; }
-    nav a { color:white; margin-left:20px; text-decoration:none; }
-
-    .container { padding:60px 40px; max-width:900px; margin:auto; }
-
-    h1 { margin-bottom:20px; }
-    p { line-height:1.6; margin-bottom:15px; }
-
-    .highlight {
-      background:white; padding:20px; border-radius:12px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <nav>
-    <h2>AI Portfolio</h2>
-    <div>
-      <a href="about.html">About</a>
-      <a href="index.html">Projects</a>
-      <a href="articles.html">Weekly Articles</a>
+  <!-- Image mosaic -->
+  <section class="home-mosaic" aria-label="Design gallery">
+    <div class="home-mosaic__inner">
+      <figure class="home-mosaic__item home-mosaic__item--tall">
+        <img
+          src="images/architectural-model.png"
+          alt="Architectural scale model with material samples and drawings in a studio"
+          width="700"
+          height="1050"
+        >
+        <figcaption>Architecture degree, School of Architecture at KU: studio &amp; model</figcaption>
+      </figure>
+      <figure class="home-mosaic__item">
+        <img
+          src="images/construction-site.png"
+          alt="Construction site with tower cranes and safety hard hats at sunset"
+          width="800"
+          height="530"
+        >
+        <figcaption>School of Engineering: field &amp; delivery</figcaption>
+      </figure>
+      <figure class="home-mosaic__item">
+        <img
+          src="images/blueprint-workspace.png"
+          alt="Technical drawings and digital design tools on a workspace"
+          width="800"
+          height="530"
+        >
+        <figcaption>Design documentation &amp; visualization</figcaption>
+      </figure>
     </div>
-  </nav>
-</header>
-
-<div class="container">
-  <h1>About Me</h1>
-
-  <div class="highlight">
-    <p>
-      I am a professional focused on integrating Artificial Intelligence into Construction and Facilities Management.
-      This portfolio represents my academic work, projects, and research exploring how AI can improve efficiency,
-      decision-making, and operations in the built environment.
+    <p class="home-mosaic__note">
+      <a class="home-link" href="assignments.html">Open assignments →</a> for coursework summaries and detail pages.
     </p>
+  </section>
 
-    <p>
-      My interests include project planning, smart facilities, data-driven construction, and emerging technologies
-      that shape the future of the AEC industry.
-    </p>
-
-    <p>
-      This course allowed me to explore real-world applications of AI and develop practical insights that I can
-      apply in professional practice.
-    </p>
-  </div>
-</div>
-
-</body>
-</html>
-
-
-<!-- ===================== articles.html ===================== -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weekly Articles | AI Portfolio</title>
-
-  <style>
-    :root {
-      --blue-energy: #3f8efc;
-      --ultrasonic-blue: #3b28cc;
-    }
-
-    body { font-family:Arial; margin:0; background:#f5f7fb; }
-    header { background:linear-gradient(135deg, var(--blue-energy), var(--ultrasonic-blue)); padding:20px; color:white; }
-    nav { display:flex; justify-content:space-between; }
-    nav a { color:white; margin-left:20px; text-decoration:none; }
-
-    .section { padding:60px 40px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
-
-    .card {
-      background:white; padding:20px; border-radius:12px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    h2 { margin-bottom:20px; }
-  </style>
-</head>
-<body>
-
-<header>
-  <nav>
-    <h2>AI Portfolio</h2>
-    <div>
-      <a href="about.html">About</a>
-      <a href="index.html">Projects</a>
-      <a href="articles.html">Weekly Articles</a>
+  <section class="home-strip wrap">
+    <h2 class="home-heading home-heading--center">Continue</h2>
+    <div class="home-strip__links">
+      <a class="home-tile" href="assignments.html">
+        <span class="home-tile__label">Assignments</span>
+        <span class="home-tile__hint">Coursework &amp; details</span>
+      </a>
+      <a class="home-tile" href="about.html">
+        <span class="home-tile__label">About</span>
+        <span class="home-tile__hint">Education &amp; background</span>
+      </a>
+      <a class="home-tile" href="articles.html">
+        <span class="home-tile__label">Weekly AI News</span>
+        <span class="home-tile__hint">Roundup &amp; notes</span>
+      </a>
     </div>
-  </nav>
-</header>
+  </section>
+</main>
 
-<section class="section">
-  <h2>Weekly Article Summaries</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Week 1</h3>
-      <p>Overview of AI fundamentals and industry relevance.</p>
-    </div>
-
-    <div class="card">
-      <h3>Week 2</h3>
-      <p>Machine learning applications in construction.</p>
-    </div>
-
-    <div class="card">
-      <h3>Week 3</h3>
-      <p>AI in smart buildings and facility management.</p>
-    </div>
-
-  </div>
-</section>
+<footer>
+  <p>
+    © 2026 Shohreh Zangeneh-Hershey ·
+    <a href="about.html">About</a> ·
+    <a href="assignments.html">Assignments</a> ·
+    <a href="articles.html">Weekly AI News</a> ·
+    <a href="https://www.linkedin.com/in/shohreh-zangeneh-hershey-012a9b48/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </p>
+</footer>
 
 </body>
 </html>

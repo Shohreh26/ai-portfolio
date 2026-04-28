@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Week 4 · Weekly AI News · KU</title>
+  <title>Week 4 · A benchmark of expert-level academic questions to assess AI capabilities · Weekly AI News</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -26,7 +26,7 @@
   <div class="page-banner">
     <div class="page-banner__inner">
       <p class="page-banner__eyebrow">Week 4 · Weekly AI News</p>
-      <h1>Placeholder: ethics, safety, or governance</h1>
+      <h1>A benchmark of expert-level academic questions to assess AI capabilities</h1>
     </div>
   </div>
 
@@ -34,27 +34,139 @@
     <div class="wrap">
       <a class="weekly-news-detail-back" href="../articles.html">← Weekly AI News</a>
 
-      <a class="weekly-news-detail__source" href="#" target="_blank" rel="noopener noreferrer">Read the source article →</a>
+      <p class="weekly-news-detail__meta">
+        Notes on the <em>Nature</em> paper introducing <strong>Humanity’s Last Exam (HLE)</strong>, a multi-modal suite of 2,500 closed-ended, expert-level questions designed to stay ahead of saturated benchmarks like MMLU. Below: a short video summary, then a written synthesis keyed to the paper’s figures and evaluation tables.
+      </p>
 
-      <div class="weekly-news-detail__figure weekly-news-detail__figure--placeholder" role="img" aria-label="Hero image placeholder">
-        Hero image
+      <p class="weekly-news-detail__sources">
+        <a class="weekly-news-detail__source" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12851929/" target="_blank" rel="noopener noreferrer">Read the open-access article (PMC) →</a>
+        <a class="weekly-news-detail__source" href="https://lastexam.ai" target="_blank" rel="noopener noreferrer">HLE benchmark site (lastexam.ai) →</a>
+      </p>
+
+      <div class="weekly-news-detail__figure weekly-news-detail__figure--native-video">
+        <div class="weekly-news-video-native">
+          <video controls preload="metadata" playsinline title="Video summary: The benchmark AIs can’t pass (yet): HLE">
+            <source src="media/week-04-hle-benchmark.mp4" type="video/mp4">
+            Your browser does not support embedded video. <a href="media/week-04-hle-benchmark.mp4">Download the MP4</a>.
+          </video>
+        </div>
       </div>
 
       <section class="assignment-detail-summary" aria-labelledby="summary-heading">
         <span class="assignment-detail-summary__label" id="summary-heading">Summary</span>
         <p class="assignment-detail-summary__text">
-          Full summary for week 4. Replace with your analysis; the interactive block below can support a scenario or quiz if you build one.
+          <strong>HLE</strong> is a multi-modal benchmark of <strong>2,500</strong> challenging, closed-ended academic questions across many subjects, written by global experts to resist quick web lookup and to probe reasoning beyond today’s easy leaderboards. While models score over about <strong>90%</strong> on saturated sets such as <strong>MMLU</strong>, they remain in the single digits to low double digits on HLE, with <strong>poor calibration</strong> (often high confidence when wrong). The work is released publicly at <strong>lastexam.ai</strong> with a private holdout set, aiming to support research and policy with a clearer picture of frontier capability.
         </p>
       </section>
 
-      <section class="weekly-news-interactive">
-        <h2>Interactive output</h2>
+      <article class="weekly-news-article">
+        <h2>Why a new benchmark?</h2>
         <p>
-          Placeholder for interactive content tied to this week’s story.
+          Popular benchmarks have begun to <strong>saturate</strong>: large language models can exceed rough <strong>90% accuracy</strong> on MMLU-style suites, which makes it harder to see how capability is actually moving. HLE responds with <strong>original, verifiable</strong> items: multiple-choice and exact-match (short answer), including <strong>text-only and image-assisted</strong> items, vetted so answers are unambiguous yet not trivially searchable.
         </p>
-        <div class="weekly-news-interactive__frame">
-          Interactive output placeholder (embed or custom HTML here)
+
+        <h2>What’s in the dataset?</h2>
+        <p>
+          Roughly <strong>14%</strong> of questions are <strong>multi-modal</strong> (text plus an image). About <strong>24%</strong> are <strong>multiple-choice</strong>; the rest are <strong>exact-match</strong> answers graded against a specification. Figure 2 in the paper summarizes how items cluster by broad area; for example, a large share in mathematics, with additional coverage in physics, biology and medicine, computer science and AI, engineering, chemistry, humanities and social science, and other fields.
+        </p>
+
+        <h2>How HLE was built</h2>
+        <p>
+          The project drew on nearly <strong>1,000 contributors</strong> from <strong>500+</strong> institutions across <strong>50</strong> countries, mostly faculty, researchers, and advanced-degree holders. Each submission includes the prompt, answer spec, rationale, subject, and contributor metadata. Quality control combines <strong>automated difficulty checks</strong> against frontier models (tens of thousands of candidate questions narrowed to thousands that stumped models) with <strong>two rounds of expert review</strong>, then ongoing community feedback, bug bounties, and audits for inadvertently searchable items. The authors report an estimated <strong>15.4%</strong> expert disagreement rate on the public set, comparable in spirit to disagreement seen in other ML benchmarks.
+        </p>
+
+        <h2>Evaluation setup</h2>
+        <p>
+          Models answer with <strong>reasoning, a final answer, and a confidence score</strong>; an <strong>LLM judge</strong> (o3-mini with structured outputs) checks correctness. Metrics include <strong>accuracy</strong> and <strong>RMS calibration error</strong> (how far stated confidence drifts from actual hit rate). The paper also studies how accuracy scales with <strong>reasoning-token budget</strong>: accuracy tends to rise log-linearly with output tokens up to about <strong>2<sup>14</sup></strong> (16,384) tokens, then can worsen, suggesting that “think longer” helps only up to a point.
+        </p>
+
+        <h2>Results (selected models)</h2>
+        <p>
+          Frontier systems at the time of writing remain weak on HLE relative to saturated benchmarks, with single-digit accuracy for several top models and somewhat higher scores on multiple-choice than on exact-match items. Post-release models (trained or tuned with awareness of the public HLE questions) score higher but still well below mastery; calibration errors remain substantial. Table 1 from the paper (excerpt below) illustrates the pattern; updated numbers are maintained on <a href="https://lastexam.ai" target="_blank" rel="noopener noreferrer">lastexam.ai</a>.
+        </p>
+
+        <div class="weekly-news-table-wrap">
+          <table class="weekly-news-table">
+            <thead>
+              <tr>
+                <th scope="col">Model</th>
+                <th scope="col">Accuracy (%)</th>
+                <th scope="col">Calibration error (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>GPT-4o</td>
+                <td>2.7 ± 0.6</td>
+                <td>89</td>
+              </tr>
+              <tr>
+                <td>Claude 3.5 Sonnet</td>
+                <td>4.1 ± 0.8</td>
+                <td>84</td>
+              </tr>
+              <tr>
+                <td>Gemini 1.5 Pro</td>
+                <td>4.6 ± 0.8</td>
+                <td>88</td>
+              </tr>
+              <tr>
+                <td>o1</td>
+                <td>8.0 ± 1.1</td>
+                <td>83</td>
+              </tr>
+              <tr>
+                <td>DeepSeek R1<sup>a</sup></td>
+                <td>8.5 ± 1.2</td>
+                <td>73</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td class="weekly-news-table__note" colspan="3">Post-release models (evaluated after HLE was open-sourced)</td>
+              </tr>
+              <tr>
+                <td>Claude 4 Sonnet</td>
+                <td>7.8 ± 1.1</td>
+                <td>75</td>
+              </tr>
+              <tr>
+                <td>Gemini 2.5 Pro</td>
+                <td>21.6 ± 1.6</td>
+                <td>72</td>
+              </tr>
+              <tr>
+                <td>GPT-5</td>
+                <td>25.3 ± 1.7</td>
+                <td>50</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+        <p class="weekly-news-article__footnote">
+          <sup>a</sup> Evaluated on a <strong>text-only</strong> subset (model is not multi-modal). Values are as reported in the PMC version of the paper; see the live leaderboard for the latest runs.
+        </p>
+
+        <h2>Scope and limits</h2>
+        <p>
+          The authors stress that HLE measures <strong>structured academic knowledge and reasoning</strong> on closed-ended items, not autonomous open-ended research, tool use in the wild, or AGI in a broad sense. STEM (especially mathematics) is overweighted relative to some other areas. Over time, models may climb the leaderboard; the benchmark is meant as a <strong>reference point</strong> and is complemented by plans such as a rolling update (<strong>HLE-Rolling</strong>) with fresh questions.
+        </p>
+
+        <h2>Takeaway</h2>
+        <p>
+          HLE makes the gap between “great on familiar benchmarks” and “reliable expert-level closed-book reasoning” easier to see. For governance and R&amp;D, it offers a concrete baseline; for the public, it is a reminder that headline scores on older tests no longer tell the whole story.
+        </p>
+      </article>
+
+      <section class="weekly-news-interactive">
+        <h2>Interactive: video &amp; download</h2>
+        <p>
+          The clip above summarizes the benchmark narrative (InVideo export, 480p). For offline viewing or class projection, you can download the same file.
+        </p>
+        <p>
+          <a class="weekly-news-download" href="media/week-04-hle-benchmark.mp4" download>Download Week 4 video (.mp4)</a>
+          <span class="assignment-file-hint">Large file (~24 MB)</span>
+        </p>
       </section>
     </div>
   </div>

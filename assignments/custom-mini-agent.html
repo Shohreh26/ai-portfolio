@@ -25,7 +25,7 @@
 <main>
   <div class="page-banner">
     <div class="page-banner__inner">
-      <p class="page-banner__eyebrow">Assignments · Placeholder course / term</p>
+      <p class="page-banner__eyebrow">University of Kansas · School of Architecture &amp; School of Engineering</p>
       <h1>Create your own Mini-Agent / GPT</h1>
     </div>
   </div>
@@ -37,25 +37,129 @@
       <section class="assignment-detail-summary" aria-labelledby="summary-heading">
         <span class="assignment-detail-summary__label" id="summary-heading">Summary</span>
         <p class="assignment-detail-summary__text">
-          Placeholder summary: the role of your custom agent, who it is for, and one example prompt/response you want to highlight. Flesh this out on the detail page when the build is done.
+          This page documents a <strong>custom mini-agent</strong> concept for assessing and planning adaptive reuse of <strong>basements in historic buildings</strong>: organizing existing conditions, code and life-safety constraints, preservation rules, and reuse options. The brief below states the problem, users, required knowledge, and expected outputs. A sample run used project documents (basement floor plan and photos) with ChatGPT’s <strong>Data Analyst</strong> style workflow; the assistant-style report and conversation links appear in the sections that follow.
         </p>
       </section>
 
       <section class="assignment-detail-panel">
-        <h2>Design &amp; behavior</h2>
+        <h2>Purpose of the assessment</h2>
         <p>
-          Placeholder for instructions you gave the agent, guardrails, and how you tested it. Describe the user scenario your mini-agent supports.
+          This document outlines a systematic approach to collecting data, documenting existing conditions, and identifying problems and solutions for a basement located in a historic building. It also explores adaptive reuse opportunities that transform the basement into a valuable amenity for a community or apartment complex, while ensuring compliance with building codes, life-safety requirements, and historic preservation regulations.
+        </p>
+        <p><strong>The brief should explain the topic and function, including:</strong></p>
+        <ul class="assignment-detail-links assignment-detail-links--tight">
+          <li>What problem is the custom mini-agent meant to solve?</li>
+          <li>Who would use this type of custom mini-agent?</li>
+          <li>What information, context, background knowledge, or situational awareness should it have?</li>
+          <li>What outcomes should it produce to be helpful or effective?</li>
+        </ul>
+      </section>
+
+      <section class="assignment-detail-panel">
+        <h2>Custom mini-agent overview</h2>
+        <p>
+          This custom mini-agent is designed to assist in the systematic assessment and redevelopment planning of basements in historic buildings. The primary problem it addresses is the difficulty of organizing and analyzing multiple types of information, such as structural conditions, code requirements, historical preservation constraints, and potential reuse options, when evaluating whether a basement space can be safely and effectively repurposed. Historic buildings often present complex challenges including moisture issues, limited natural light, outdated building systems, and strict preservation regulations. The mini-agent helps streamline the process of documenting existing conditions, identifying problems, and recommending feasible adaptive reuse solutions.
         </p>
         <p>
-          Include sample prompts and representative outputs in the next revision.
+          The primary users of this mini-agent would include architects, building inspectors, preservation specialists, property managers, urban planners, and students studying architecture or construction management. It could also be useful for developers or owners of historic properties who are exploring ways to improve the functionality and value of unused basement spaces while maintaining regulatory compliance.
+        </p>
+        <p>
+          To be effective, the mini-agent should have access to and understand several types of information. This includes building codes and life-safety standards (such as fire egress, ventilation, and accessibility requirements), historic preservation guidelines, typical structural and environmental issues found in older buildings (for example foundation deterioration, moisture infiltration, or outdated mechanical systems), and principles of adaptive reuse. It should also understand the context of community needs and the types of amenities that may benefit residents or building occupants.
+        </p>
+        <p>
+          The expected outcome of the mini-agent is to help users organize collected data, summarize existing conditions, identify key problems, and suggest practical design or renovation strategies. It should also be able to recommend potential adaptive reuse options, such as community spaces, storage areas, fitness rooms, or shared workspaces, while ensuring that proposed solutions align with safety regulations and preservation requirements. Ultimately, the mini-agent supports informed decision-making by turning complex building assessment information into clear, actionable insights.
         </p>
       </section>
 
       <section class="assignment-detail-panel">
-        <h2>Links &amp; files</h2>
+        <h2>Documents analyzed</h2>
         <p>
-          Placeholder for a share link to the GPT or mini-agent, plus any export or documentation you turned in.
+          <strong>Project PDF:</strong> <cite>basement.pdf</cite> (basement documentation package).
         </p>
+        <p>
+          <strong>Inputs for the sample run:</strong> basement floor plan and existing photographs. Additional photos can be uploaded to deepen the analysis (structural details, moisture, mechanical rooms, egress paths, and so on).
+        </p>
+      </section>
+
+      <section class="assignment-detail-panel assignment-detail-panel--analysis">
+        <h2>Sample output: basement existing conditions analysis</h2>
+        <p class="assignment-analysis-lead">
+          The following text mirrors the kind of structured report the mini-agent (or a Data Analyst-oriented GPT workflow) can generate from a floor plan and photos. It is illustrative of the intended output when more images and sheets are added.
+        </p>
+
+        <h3 class="assignment-analysis-h3">Documents reviewed</h3>
+        <p>Basement floor plan and existing photographs.</p>
+
+        <h3 class="assignment-analysis-h3">1. General overview</h3>
+        <p>
+          The basement appears to function primarily as utility, storage, and service space within the historic building. The floor plan indicates several functional rooms including laundry, storage areas, utility or mechanical rooms, hallways, and workspaces. The existing photographs confirm that many of these areas are currently used for storage and maintenance activities rather than habitable or community uses. The space shows characteristics typical of older historic basements: exposed masonry walls, visible utilities, minimal natural light, and aging finishes.
+        </p>
+
+        <h3 class="assignment-analysis-h3">Observations from existing photos</h3>
+
+        <h4 class="assignment-analysis-h4">Structural and material conditions</h4>
+        <p>Several construction materials and structural elements are visible. Observed conditions include:</p>
+        <ul class="assignment-detail-deliverables">
+          <li>Exposed brick and concrete block walls</li>
+          <li>Visible structural ceiling framing</li>
+          <li>Concrete floor slab with cracking</li>
+          <li>Utility piping and columns present in circulation areas</li>
+        </ul>
+        <p>These features are common in older basements but would require evaluation if the space is intended for public or residential amenity use.</p>
+        <p><strong>Potential issues:</strong> cracking in the concrete floor; aging masonry surfaces; unfinished surfaces not suitable for occupied space.</p>
+
+        <h4 class="assignment-analysis-h4">Moisture and water damage</h4>
+        <p>
+          One photo shows significant staining and discoloration on the ceiling, which is often an indicator of past or active water infiltration, plumbing leaks, or possible roof or floor drainage issues from above.
+        </p>
+        <p><strong>Potential concerns:</strong> long-term moisture can cause mold growth; damage to plaster or ceiling materials; structural deterioration if not addressed. A moisture investigation and waterproofing evaluation would likely be required.</p>
+
+        <h4 class="assignment-analysis-h4">Mechanical and utility systems</h4>
+        <p>Visible elements include utility piping, mechanical equipment, exposed electrical lighting, and ventilation openings. Lighting consists of basic fluorescent fixtures, which provide limited coverage and may not meet lighting requirements for occupied spaces.</p>
+        <p><strong>Potential code considerations:</strong> electrical upgrades; fire protection systems; improved mechanical ventilation; updated lighting levels.</p>
+
+        <h4 class="assignment-analysis-h4">Safety and life-safety conditions</h4>
+        <p>Current basement conditions suggest the space is not designed for regular occupancy. Observed concerns include limited visible emergency exit signage, low ceiling clearance in some areas, potential obstructions in circulation paths, and storage clutter in certain rooms. For adaptive reuse, the building would need to address emergency egress routes, fire separation, sprinkler systems, and ADA accessibility.</p>
+
+        <h3 class="assignment-analysis-h3">Spatial use based on floor plan</h3>
+        <p>The floor plan suggests the basement includes laundry, storage rooms, workshop or maintenance areas, utility or mechanical rooms, and circulation hallways. These spaces currently function primarily as support spaces rather than active community spaces.</p>
+
+        <h3 class="assignment-analysis-h3">Opportunities for adaptive reuse</h3>
+        <p>If properly renovated, the basement could potentially support new uses for residents or the community.</p>
+        <p><strong>Residential amenity spaces:</strong> fitness room; resident lounge; study or coworking area.</p>
+        <p><strong>Community spaces:</strong> multipurpose meeting room; art or workshop studio; community storage lockers.</p>
+        <p><strong>Building support spaces:</strong> improved laundry facilities; bike storage; package room.</p>
+        <p>These options would require addressing moisture control, improved lighting, ventilation upgrades, code compliance, and accessibility improvements.</p>
+
+        <h3 class="assignment-analysis-h3">Key problems identified</h3>
+        <ul class="assignment-detail-deliverables">
+          <li>Water damage and possible moisture infiltration</li>
+          <li>Cracked concrete flooring</li>
+          <li>Outdated lighting and utilities</li>
+          <li>Unfinished surfaces</li>
+          <li>Storage clutter and inefficient space use</li>
+          <li>Potential life-safety and accessibility concerns</li>
+        </ul>
+
+        <h3 class="assignment-analysis-h3">Expected recommendations (next assessment steps)</h3>
+        <p>To move toward adaptive reuse, the mini-agent or assessment process should recommend: detailed structural inspection; moisture and waterproofing evaluation; mechanical and electrical system upgrades; code compliance review; and space planning for new uses.</p>
+
+        <p><strong>Next step:</strong> upload additional photos to support a fuller basement conditions report, clearer code issue identification, adaptive reuse layout ideas, and a polished assessment section for the assignment.</p>
+      </section>
+
+      <section class="assignment-detail-panel">
+        <h2>Links &amp; conversations</h2>
+        <ul class="assignment-detail-links">
+          <li>
+            <strong>Data Analyst GPT (conversation with floor plan and photos):</strong>
+            <a href="https://chatgpt.com/g/g-HMNcP6w7d-data-analyst/c/69b224bf-6758-832a-9294-3c74a1bef59f" target="_blank" rel="noopener noreferrer">open chat</a>
+          </li>
+          <li>
+            <strong>Shared conversation (alternate link):</strong>
+            <a href="https://chatgpt.com/share/69b23a8c-7b64-8004-8f17-94e7964776d7" target="_blank" rel="noopener noreferrer">chatgpt.com/share/…</a>
+          </li>
+          <li><a href="https://chatgpt.com/gpts" target="_blank" rel="noopener noreferrer">ChatGPT GPTs</a> (browse or create Custom GPTs)</li>
+        </ul>
       </section>
     </div>
   </div>

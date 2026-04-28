@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Week 5 · Weekly AI News · KU</title>
+  <title>Week 5 · Flexible by design, reliable by proof: Building and evaluating AI agents that work in the real world · Weekly AI News</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -26,7 +26,7 @@
   <div class="page-banner">
     <div class="page-banner__inner">
       <p class="page-banner__eyebrow">Week 5 · Weekly AI News</p>
-      <h1>Placeholder: product or startup coverage</h1>
+      <h1>Flexible by design, reliable by proof: Building and evaluating AI agents that work in the real world</h1>
     </div>
   </div>
 
@@ -34,27 +34,67 @@
     <div class="wrap">
       <a class="weekly-news-detail-back" href="../articles.html">← Weekly AI News</a>
 
-      <a class="weekly-news-detail__source" href="#" target="_blank" rel="noopener noreferrer">Read the source article →</a>
+      <p class="weekly-news-detail__meta">
+        This week follows IBM’s piece <cite>Flexible by design, reliable by proof: Building and evaluating AI agents that work in the real world</cite> (Alex Straley), covering why demos outpace production deployments, why hybrid <strong>deterministic + agentic</strong> design wins, and what <strong>observability, evaluation, and human-in-the-loop</strong> mean for trust at scale. The hero image is the title slide from the companion deck below.
+      </p>
 
-      <div class="weekly-news-detail__figure weekly-news-detail__figure--placeholder" role="img" aria-label="Hero image placeholder">
-        Hero image
+      <p class="weekly-news-detail__sources">
+        <a class="weekly-news-detail__source" href="https://www.ibm.com/think/insights/building-evaluating-ai-agents-real-world" target="_blank" rel="noopener noreferrer">Read the IBM Think article →</a>
+        <a class="weekly-news-detail__source" href="https://chatgpt.com/share/69e53010-ec44-83ea-befb-2f694cb54609" target="_blank" rel="noopener noreferrer">Companion dialogue summary (ChatGPT) →</a>
+      </p>
+
+      <div class="weekly-news-detail__figure weekly-news-detail__figure--portrait">
+        <img src="media/week-05-hero.png" alt="Title slide from the Week 5 deck on AI agents, hybrid workflows, and reliability." width="682" height="1024" loading="eager" decoding="async">
       </div>
 
       <section class="assignment-detail-summary" aria-labelledby="summary-heading">
         <span class="assignment-detail-summary__label" id="summary-heading">Summary</span>
         <p class="assignment-detail-summary__text">
-          Full summary for week 5. Replace when you have the real article and your commentary drafted.
+          AI agents are shifting from brittle automation to <strong>reasoning systems</strong> that interpret context, plan, and use tools, but <strong>production</strong> demands reliability under variability, scale, regulation, and accountability, not just fast prototypes. IBM’s argument is that the enterprise path is <strong>hybrid</strong>: keep rigid, rules-based controls where policy requires it, and add agentic intelligence where ambiguity and judgment help. <strong>Reliability by proof</strong> means continuous observability, evaluation, and optimization; <strong>human-in-the-loop</strong> is a design feature for high-stakes decisions. Societally, work moves toward <strong>human–AI collaboration</strong>, stronger governance, and systems where ethics and trust matter as much as raw capability. For <strong>AEC</strong>, the same pattern fits: code, safety, and approvals stay deterministic, while design exploration, scheduling trade-offs, and contract analysis can benefit from agents, always with audit trails and professional sign-off.
         </p>
       </section>
 
-      <section class="weekly-news-interactive">
-        <h2>Interactive output</h2>
+      <article class="weekly-news-article">
+        <h2>Main findings and arguments</h2>
         <p>
-          Placeholder for interactive content tied to this week’s story.
+          Enterprise automation has moved from deterministic scripts and RPA through predictive models to <strong>agentic AI</strong> that can interpret intent, chain tool use, and adapt when inputs change. That flexibility is why agents help in messy, real-world tasks, and why their behavior is <strong>probabilistic</strong> rather than guaranteed.
         </p>
-        <div class="weekly-news-interactive__frame">
-          Interactive output placeholder (embed or custom HTML here)
-        </div>
+        <p>
+          The article stresses a gap between <strong>experimentation and execution</strong>: low-code and LLMs make prototypes quick, but production needs load-bearing reliability, observability, governance, security, compliance, and KPIs. What is a minor inconsistency in a demo becomes an incident when agents touch live ERP, HR, finance, or customer channels.
+        </p>
+        <p>
+          It rejects a false choice between “everything agentic” and “everything rigid.” Full autonomy is a poor fit for budget caps, identity checks, regulatory gates, and payment controls. The productive pattern is <strong>orchestration</strong>: deterministic steps anchor the workflow; agentic steps extend it (for example, supplier suggestion, draft language, or exception investigation in procurement).
+        </p>
+        <p>
+          <strong>Reliability by proof</strong> is framed as a lifecycle: <strong>observability</strong> (traces, tool calls, retrieval), <strong>evaluation</strong> (success, safety, containment, simulations, guardrail tests), and <strong>optimization</strong> (accuracy, latency, cost, drift, regression). Human-in-the-loop separates <em>recommendation</em> from <em>decision</em> where stakes are high.
+        </p>
+
+        <h2>Broader implications for society</h2>
+        <p>
+          Agents expand automation from repetitive tasks to <strong>complex, knowledge-intensive</strong> work. Organizations are pushed toward models where AI assists and humans retain authority on sensitive choices: less “lights-out” fantasy, more <strong>accountable collaboration</strong>.
+        </p>
+        <p>
+          As agents integrate with personal data and critical infrastructure, demand rises for <strong>trust, transparency, and governance</strong>. The societal story is not only efficiency; it is building intelligent systems where <strong>reliability and ethics</strong> are first-class requirements, not afterthoughts once something breaks.
+        </p>
+
+        <h2>Relevance to architecture, engineering, and construction (AEC)</h2>
+        <p>
+          AEC is a natural fit for the same hybrid architecture. <strong>Deterministic</strong> layers preserve code compliance, safety rules, permit logic, and formal approvals. <strong>Agentic</strong> layers can support design iteration, clash and option analysis, schedule what-if studies, procurement and <strong>contract review</strong>, and document-heavy coordination in settings with ambiguity and many stakeholders.
+        </p>
+        <p>
+          Observability and evaluation mirror how projects already need <strong>auditability</strong>: who approved what, on what basis, with which model version. Human-in-the-loop aligns with professional practice: engineers and architects remain responsible for validating outputs before work is built or signed off, preserving <strong>safety and liability clarity</strong> while still gaining speed from AI assistance.
+        </p>
+      </article>
+
+      <section class="weekly-news-interactive">
+        <h2>Interactive: slide deck</h2>
+        <p>
+          Week 5 includes a PowerPoint deck that extends this IBM framing with general AI-agent themes for class and portfolio use. Download and open in <strong>Microsoft PowerPoint</strong>, <strong>Apple Keynote</strong>, or <strong>Google Slides</strong> after upload.
+        </p>
+        <p>
+          <a class="weekly-news-download" href="media/week-05-ai-agents-ibm-szh.pptx" download>Download Week 5 deck (.pptx)</a>
+          <span class="assignment-file-hint">Large file (~23 MB)</span>
+        </p>
       </section>
     </div>
   </div>

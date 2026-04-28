@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Week 6 · Weekly AI News · KU</title>
+  <title>Week 6 · Building Effective Domain-Specific Agentic AI Systems in the AEC Industry · Weekly AI News</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -26,7 +26,7 @@
   <div class="page-banner">
     <div class="page-banner__inner">
       <p class="page-banner__eyebrow">Week 6 · Weekly AI News</p>
-      <h1>Placeholder: AEC / built-environment AI angle</h1>
+      <h1>Building Effective Domain-Specific Agentic AI Systems in the AEC Industry</h1>
     </div>
   </div>
 
@@ -34,27 +34,84 @@
     <div class="wrap">
       <a class="weekly-news-detail-back" href="../articles.html">← Weekly AI News</a>
 
-      <a class="weekly-news-detail__source" href="#" target="_blank" rel="noopener noreferrer">Read the source article →</a>
+      <p class="weekly-news-detail__meta">
+        Notes on AEC Foundry’s overview of <strong>domain-specific agentic AI</strong> in architecture, engineering, and construction: when workflows versus adaptive agents fit, what building blocks matter (retrieval, tools, orchestration, multimodal search), and why privacy and governance are non-negotiable. Below: a short video summary, then a structured synthesis. Primary source: <a href="https://www.aecfoundry.com/blog/building-effective-domain-specific-agentic-ai-systems-in-the-aec-industry" target="_blank" rel="noopener noreferrer">AEC Foundry</a>.
+      </p>
 
-      <div class="weekly-news-detail__figure weekly-news-detail__figure--placeholder" role="img" aria-label="Hero image placeholder">
-        Hero image
+      <p class="weekly-news-detail__sources">
+        <a class="weekly-news-detail__source" href="https://www.aecfoundry.com/blog/building-effective-domain-specific-agentic-ai-systems-in-the-aec-industry" target="_blank" rel="noopener noreferrer">Read the source article (AEC Foundry) →</a>
+        <a class="weekly-news-detail__source" href="https://chatgpt.com/share/69e539cd-d6b8-83ea-a324-ebfe92c3ed3b" target="_blank" rel="noopener noreferrer">Companion dialogue summary (ChatGPT) →</a>
+      </p>
+
+      <div class="weekly-news-detail__figure weekly-news-detail__figure--native-video">
+        <div class="weekly-news-video-native">
+          <video controls preload="metadata" playsinline title="Video summary: Agentic AI in construction">
+            <source src="media/week-06-agentic-ai-aec.mp4" type="video/mp4">
+            Your browser does not support embedded video. <a href="media/week-06-agentic-ai-aec.mp4">Download the MP4</a>.
+          </video>
+        </div>
       </div>
 
       <section class="assignment-detail-summary" aria-labelledby="summary-heading">
         <span class="assignment-detail-summary__label" id="summary-heading">Summary</span>
         <p class="assignment-detail-summary__text">
-          Full summary for week 6. Replace with your write-up; optional tie-in to architecture or construction management coursework.
+          The piece argues that <strong>generic AI is not enough</strong> for AEC: value comes from systems tuned to domain data, tools, and risk, combining <strong>structured workflows</strong> for repeatable compliance-style tasks with <strong>adaptive agents</strong> where requirements are ambiguous or multimodal. Effective stacks layer augmented LLMs (retrieval, memory, tools), chaining, routing, parallel work, orchestration, and self-reflection; <strong>drawings, models, and specs</strong> demand multimodal retrieval and vision-language understanding. Because project data is sensitive, deployments need anonymization, private or on-prem architecture, and scoped tool access. Societally, the same pattern mirrors broader shifts toward knowledge-work automation, human–AI collaboration, and higher expectations for <strong>trust, transparency, and governance</strong> in high-stakes environments.
         </p>
       </section>
 
-      <section class="weekly-news-interactive">
-        <h2>Interactive output</h2>
+      <article class="weekly-news-article">
+        <h2>Main findings and arguments</h2>
         <p>
-          Placeholder for interactive content tied to this week’s story.
+          Agentic systems can act as intermediaries that route work, use tools, and combine modalities, which is useful for cross-referencing drawings with specifications, catching discrepancies, and accelerating documentation. The article distinguishes two patterns:
         </p>
-        <div class="weekly-news-interactive__frame">
-          Interactive output placeholder (embed or custom HTML here)
-        </div>
+        <ul class="weekly-news-article__list">
+          <li><strong>Workflows:</strong> predefined paths where LLMs and tools follow a fixed sequence (for example, pulling data from specs and validating against rules for compliance reports).</li>
+          <li><strong>Agents:</strong> systems that plan and revise based on feedback and work best when inputs are fuzzy, multi-step, or require synthesis across sources.</li>
+        </ul>
+        <p>
+          Not every task needs an agent: a single model call with retrieval or examples may suffice for briefs or narrow Q&amp;A. Agents earn their keep when tasks need <strong>flexibility</strong>, <strong>diverse formats</strong> (text plus drawings), or <strong>deeper automation</strong> such as design iteration and CAD/BIM scripting via SDKs (Revit, Rhino, AutoCAD) and coding assistants.
+        </p>
+        <p>
+          Building blocks discussed include <strong>augmented LLMs</strong> (retrieval, APIs, memory), <strong>prompt chaining</strong>, <strong>routing</strong> to specialists, <strong>parallelization</strong> for multi-criteria checks, <strong>orchestration agents</strong> delegating subtasks (for example clash detection plus remediation proposals), and <strong>self-reflection</strong> to tighten outputs after simulation or review. Multimodal search (embeddings for drawings, linked spec retrieval, vision models for schematics) is central because AEC knowledge is visual as well as textual.
+        </p>
+        <p>
+          Security and privacy get explicit emphasis: financials, proprietary details, and contracts require anonymization where appropriate, secure hosting, role-based access, and tightly scoped tools. Design principles called out include <strong>simplicity first</strong>, <strong>transparent reasoning</strong> for debuggability, <strong>documentation</strong> of tools and APIs, and <strong>iterative testing</strong> in sandboxes, especially around error recovery and data handling.
+        </p>
+
+        <h2>Broader implications for society</h2>
+        <p>
+          Domain-specific agentic stacks extend automation from rote work to <strong>complex professional judgment</strong> supported by large, heterogeneous datasets. The likely trajectory is more <strong>human–AI teaming</strong>, where models propose and retrieve and people remain accountable on safety, quality, and client outcomes.
+        </p>
+        <p>
+          Upside includes faster, better-informed decisions in complicated environments (infrastructure, capital projects, regulated operations). Risks parallel other enterprise AI adoption: <strong>data protection</strong>, <strong>explainability</strong>, and <strong>governance of autonomy</strong> when recommendations touch compliance and physical risk.
+        </p>
+
+        <h2>Relevance and influence on AEC</h2>
+        <p>
+          The article maps directly to how firms deliver projects:
+        </p>
+        <ol class="weekly-news-article__list">
+          <li><strong>Workflow automation:</strong> documentation, compliance checks, and reporting with less manual repetition across the lifecycle.</li>
+          <li><strong>Design and analysis:</strong> tighter loops with authoring tools, parametric workflows, clash detection, and simulation-informed refinement.</li>
+          <li><strong>Knowledge management:</strong> unified search over past projects (cost, design intent, materials) via multimodal indexes.</li>
+          <li><strong>Multimodal intelligence:</strong> linking BIM, 2D sheets, and specs to reduce coordination errors in planning and construction.</li>
+          <li><strong>Safety and compliance:</strong> code and permit workflows assisted by retrieval and structured verification; risk assessment patterns (the post cites products such as SWMS AI, Archie, and Upsafe as examples of domain tools).</li>
+          <li><strong>Competitive position:</strong> firms that integrate domain agents thoughtfully can compress delivery timelines, improve decision quality, and scale innovation, provided trust and guardrails keep pace.</li>
+        </ol>
+        <p>
+          The through-line is that AEC success depends on <strong>deep integration</strong> with industry tools, standards, and data governance, not generic chat alone.
+        </p>
+      </article>
+
+      <section class="weekly-news-interactive">
+        <h2>Interactive: video &amp; download</h2>
+        <p>
+          Week 6 includes an MP4 walkthrough aligned to this summary. Download for offline viewing or presentation.
+        </p>
+        <p>
+          <a class="weekly-news-download" href="media/week-06-agentic-ai-aec.mp4" download>Download Week 6 video (.mp4)</a>
+          <span class="assignment-file-hint">Large file (~40 MB)</span>
+        </p>
       </section>
     </div>
   </div>
